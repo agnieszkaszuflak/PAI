@@ -15,7 +15,7 @@
             if(isSet($_GET["cookie"])){
                 setcookie("nazwa", $_GET["czas"], time() + (86400 * 30), "/");
             }
-            echo "<br><a href=\"index.php\">Wróć</a>"
+            echo "<br><a href=\"index.php\">Wstecz</a>"
         ?>
         
     </body>

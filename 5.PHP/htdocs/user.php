@@ -14,10 +14,13 @@
             echo "Zalogowano";
             echo " jako " . $_SESSION["zalogowanyImie"];
         ?>
-        <form action= "user.php" method= "post" enctype='multipart/form-data'>
-                <input name= "myfile" type="file" >
-                <input type="submit" value="Załaduj zdjęcie" name="zdjecie">
-        </form>
+        <fieldset>
+            <legend>Załaduj zdjęcie na serwer i stronę</legend>
+            <form action= "user.php" method= "post" enctype='multipart/form-data'>
+                    <input name= "myfile" type="file" >
+                    <input type="submit" value="Załaduj zdjęcie" name="zdjecie">
+            </form>
+        </fieldset>
         <img src="photo\photo.jpg">
         <?php
             if(isSet($_POST["zdjecie"])){
@@ -40,9 +43,12 @@
             }
         
         ?>
-        <form action= "index.php" method= "post">
-                <input type="submit" value="Wyloguj" name="wyloguj">
-        </form>
+        <fieldset>
+            <legend> Formularz wylogowywania</legend>
+            <form action= "index.php" method= "post">
+                    <input type="submit" value="Wyloguj" name="wyloguj">
+            </form>
+        </fieldset>
         <a href="index.php">Przejdź do okna logowania</a>
     </body>
 </html>
