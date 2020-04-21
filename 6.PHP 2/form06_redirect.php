@@ -12,7 +12,6 @@
          $stmt->bind_param("is", $_POST['id_prac'], $_POST['nazwisko']);
          $result = $stmt->execute();
 
-    echo "hvfbhdj";
     $stmt->close();
      }
     if ($result) {
