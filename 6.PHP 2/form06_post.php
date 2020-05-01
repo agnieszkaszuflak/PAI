@@ -1,4 +1,13 @@
 <!DOCTYPE html>
+<?php
+session_start();
+if($_SESSION["info"]==1){
+    printf("Wstawienie danych nie powiodło się!");
+    $_SESSION["info"]= 0;
+} else {
+    $_SESSION["info"]= 0;
+}
+?>
 <html>
     <body>
         <fieldset>

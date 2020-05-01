@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html>
     <?php
+    session_start();
+    if($_SESSION["info"]==2){
+        printf("Wstawienie danych powiodło się! <br/>");
+        $_SESSION["info"]= 0;
+    }
+    else{
+        $_SESSION["info"]= 0;
+    }
     $link = mysqli_connect("localhost", "scott", "tiger", "instytut");
      if (!$link) {
          printf("Connect failed: %s\n", mysqli_connect_error());

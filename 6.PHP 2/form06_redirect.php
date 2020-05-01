@@ -1,4 +1,5 @@
 <?php
+    session_start();
      $link = mysqli_connect("localhost", "scott", "tiger", "instytut");
      if (!$link) {
          printf("Connect failed: %s\n", mysqli_connect_error());
@@ -16,8 +17,10 @@
     $stmt->close();
      }
     if ($result) {
+            $_SESSION["info"] =2;
              header("Location: form06_get.php");
     }else {
+        $_SESSION["info"] = 1;
         header("Location: form06_post.php");
              
          
