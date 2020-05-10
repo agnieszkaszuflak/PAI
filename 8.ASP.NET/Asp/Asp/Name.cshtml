@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<script>
+    @{ 
+        var Name = "Robert Paulson";
+        if (Request["name"] != "" && Request["name"] != null)
+        {
+            Name = Request["name"];
+        }
+
+
+    }
+</script>
+<html>
+
+
+<head>
+    <title></title>
+</head>
+<body>
+    @{  
+
+        List<string> names = new List<string>();
+        for (var i = 0; i < 10; i++)
+        {
+            names.Add("His name is " +  Name);
+            <p> @names[i]</p>
+        }
+    }
+    
+</body>
+</html>

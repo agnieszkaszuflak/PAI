@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<script>
+    @{
+        var rules = new List<string>();
+        if (Session["rules"] != null)
+        {
+            rules = (List<String>)Session["rules"];
+        }
+    }
+</script>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <form action="Response.cshtml" method="post">
+        Rule <input type="text" name="rule" /><br>
+        <input type="submit" value="Wstaw" name="wstaw">
+    </form>
+    
+        @foreach ( var rul in rules)
+        {
+            <p>@rul</p>
+        }
+    
+
+</body>
+</html>
